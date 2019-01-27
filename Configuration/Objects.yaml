@@ -1,0 +1,16 @@
+Onedrop\GoogleNotify\Google\AuthStorage:
+  properties:
+    cache:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: Onedrop_GoogleNotify_Tokens
+
+Onedrop\GoogleNotify\Service\GoogleIndexing:
+  arguments:
+    1:
+      object:
+        factoryObjectName: Onedrop\GoogleNotify\Slot\ClientFactory
+        factoryMethodName: create

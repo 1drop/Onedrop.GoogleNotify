@@ -1,0 +1,26 @@
+{
+    "name": "onedrop/google-notify",
+    "type": "neos-package",
+    "description": "Push google indexing notification on page publish",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hans Höchtl",
+            "email": "hhoechtl@1drop.de"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.2",
+        "neos/neos": "^4.2"
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Onedrop.GoogleNotify"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Onedrop\\GoogleNotify\\": "Classes"
+        }
+    }
+}

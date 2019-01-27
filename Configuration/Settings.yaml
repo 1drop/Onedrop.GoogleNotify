@@ -1,0 +1,6 @@
+Onedrop:
+  GoogleNotify:
+    baseUri: 'https://example.com/'
+    nodeTypes: []
+    authentication:
+      applicationName: 'Neos indexing'

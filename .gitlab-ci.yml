@@ -1,0 +1,22 @@
+stages:
+  - lint
+
+variables:
+  CACHE_DIR: .cache
+  COMPOSER_CACHE_DIR: ${CI_PROJECT_DIR}/${CACHE_DIR}/composer
+
+cache:
+  key: global
+  paths:
+    - $CACHE_DIR
+
+#####################################
+#           LINTING                 #
+#####################################
+lint:php:
+  image: 1drop/php-72-docker-utils
+  stage: lint
+  cache:
+    policy: pull
+  script:
+    - php-cs-fixer fix -v --dry-run --using-cache=no
